@@ -23,7 +23,7 @@ class Block:
         for position in tiles:
             position = Position(position.row + self.row_offset, position.column + self.column_offset)
             moved_tiles.append(position)
-            return moved_tiles
+        return moved_tiles
         
     def rotate(self):
         self.rotation_state += 1

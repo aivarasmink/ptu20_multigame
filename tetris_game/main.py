@@ -12,7 +12,7 @@ game_over_surface = title_font.render("Game Over", True, Colors.white)
 score_rect = pygame.Rect(320, 55, 170, 60)
 next_rect = pygame.Rect(320, 215, 170, 180)
 
-screen = pygame.display.set_mode((500, 620))
+screen = pygame.display.set_mode((620, 620))
 pygame.display.set_caption("Tetris")
 
 clock = pygame.time.Clock()
@@ -53,7 +53,7 @@ while True:
         screen.blit(game_over_surface, (320, 450, 50, 50))
 
     pygame.draw.rect(screen, Colors.light_blue, score_rect, 0, 10)
-    screen.blit(score_value_surface, score_value_surface.get_rect(centerx = scoure_rect.centerx, centery = scoure_rect.centery))
+    screen.blit(score_value_surface, score_value_surface.get_rect(centerx=score_rect.centerx, centery=score_rect.centery))
     pygame.draw.rect(screen, Colors.light_blue, next_rect, 0, 10)
     game.draw(screen)
 
